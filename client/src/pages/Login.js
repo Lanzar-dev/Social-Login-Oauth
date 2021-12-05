@@ -4,11 +4,17 @@ import Github from "../img/github.png";
 
 const Login = () => {
   const google = () => {
-    window.open("http://localhost:4001/auth/google/", "_self");
+    window.open(
+      "https://intensify-exercise.herokuapp.com/auth/google/",
+      "_self"
+    );
   };
 
   const github = () => {
-    window.open("http://localhost:4001/auth/github/", "_self");
+    window.open(
+      "https://intensify-exercise.herokuapp.com/auth/github/",
+      "_self"
+    );
   };
 
   const facebook = () => {
