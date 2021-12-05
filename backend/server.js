@@ -6,12 +6,13 @@ const authRoute = require("./routes/auth");
 const cors = require("cors");
 require("./passport");
 
+const KEY = process.env.KEY;
 const app = express();
 
 app.use(
   cookieSession({
     name: "session",
-    keys: ["lanzar"],
+    keys: [KEY],
     maxAge: 24 * 60 * 60 * 100,
   })
 );
@@ -28,6 +29,18 @@ app.use(
 );
 
 app.use("/auth", authRoute);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("Api running");
+  });
+}
 
 const PORT = process.env.PORT || 4001;
 app.listen(PORT, () => {
