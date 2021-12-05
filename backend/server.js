@@ -2,6 +2,7 @@ require("dotenv").config();
 const cookieSession = require("cookie-session");
 const express = require("express");
 const passport = require("passport");
+const path = require("path");
 const authRoute = require("./routes/auth");
 const cors = require("cors");
 require("./passport");
