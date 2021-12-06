@@ -1,4 +1,4 @@
-### Project Project stack
+### Project stack
 
 Reactjs\
 Nodejs\
