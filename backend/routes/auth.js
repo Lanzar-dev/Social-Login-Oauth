@@ -6,6 +6,7 @@ const passport = require("passport");
 // const CLIENT_URL = "http://localhost:3000/";
 const CLIENT_URL = "https://intensify-exercise.herokuapp.com/";
 
+//get info on success
 router.get("/login/success", (req, res) => {
   if (req.user) {
     res.status(200).json({
