@@ -23,8 +23,7 @@ app.use(passport.session());
 
 app.use(
   cors({
-    // origin: "http://localhost:3000",
-    origin: "https://intensify-exercise.herokuapp.com/",
+    origin: "http://localhost:3000",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
