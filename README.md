@@ -2,7 +2,7 @@
 
 Reactjs\
 Nodejs\
-Expressjs\
+Expressjs
 
 The project uses social medial login option, using passportjs
 
@@ -15,7 +15,7 @@ GOOGLE_CLIENT_SECRET=\
 GITHUB_CLIENT_ID=\
 GITHUB_CLIENT_SECRET=\
 FACEBOOK_APP_ID=\
-FACEBOOK_APP_SECRET=\
+FACEBOOK_APP_SECRET=
 
 In the project directory, you can run:
 
@@ -25,6 +25,6 @@ In the client directory, you can run:
 
 ### `npm start`
 
-# Social-Login-Oauth
+## Social-Login-Oauth
 
 https://intensify-exercise.herokuapp.com/
