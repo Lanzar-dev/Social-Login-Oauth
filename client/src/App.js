@@ -23,12 +23,21 @@ function App() {
         },
       })
         .then((response) => {
-          if (response.status === 200) return response.json();
+          if (response.status === 200) return response.text();
           throw new Error("authentication failed!");
         })
-        .then((resObject) => {
-          setUser(resObject.user);
+        .then((shdBeJson) => {
+          let json = null;
+          json = JSON.parse(shdBeJson);
+          setUser(json);
         })
+        // .then((response) => {
+        //   if (response.status === 200) return response.json();
+        //   throw new Error("authentication failed!");
+        // })
+        // .then((resObject) => {
+        //   setUser(resObject.user);
+        // })
         .catch((err) => {
           console.log(err);
         });
