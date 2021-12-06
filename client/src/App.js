@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const getUser = () => {
       // fetch("http://localhost:4001/auth/login/success", {
-      fetch("https://intensify-exercise.herokuapp.com/login/success", {
+      fetch("http://intensify-exercise.herokuapp.com/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -23,21 +23,12 @@ function App() {
         },
       })
         .then((response) => {
-          if (response.status === 200) return response.text();
+          if (response.status === 200) return response.json();
           throw new Error("authentication failed!");
         })
-        .then((shdBeJson) => {
-          let json = null;
-          json = JSON.parse(shdBeJson);
-          setUser(json);
+        .then((resObject) => {
+          setUser(resObject.user);
         })
-        // .then((response) => {
-        //   if (response.status === 200) return response.json();
-        //   throw new Error("authentication failed!");
-        // })
-        // .then((resObject) => {
-        //   setUser(resObject.user);
-        // })
         .catch((err) => {
           console.log(err);
         });
