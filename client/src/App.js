@@ -12,7 +12,8 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("http://localhost:4001/auth/login/success", {
+      // fetch("http://localhost:4001/auth/login/success", {
+      fetch("https://intensify-exercise.herokuapp.com/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
