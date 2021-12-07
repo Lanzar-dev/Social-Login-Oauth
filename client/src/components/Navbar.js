@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ user }) => {
   const logout = () => {
-    window.open("http://localhost:4001/auth/logout", "_self");
+    // window.open("http://localhost:4001/auth/logout", "_self");
+    window.open(
+      "https://intensify-exercise.herokuapp.com/auth/logout",
+      "_self"
+    );
   };
 
   return (
