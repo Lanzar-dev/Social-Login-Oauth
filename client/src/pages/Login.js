@@ -12,11 +12,19 @@ const Login = () => {
   };
 
   const github = () => {
-    window.open("http://localhost:4001/auth/github/", "_self");
+    // window.open("http://localhost:4001/auth/github/", "_self");
+    window.open(
+      "https://intensify-exercise.herokuapp.com/auth/github",
+      "_self"
+    );
   };
 
   const facebook = () => {
-    window.open("http://localhost:4001/auth/facebook/", "_self");
+    // window.open("http://localhost:4001/auth/facebook/", "_self");
+    window.open(
+      "https://intensify-exercise.herokuapp.com/auth/facebook",
+      "_self"
+    );
   };
 
   return (
